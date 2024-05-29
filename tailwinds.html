@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Framer Motion Animation</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1>Framer Motion Animation</h1>
+  <div className="container">
+    <div className="content">
+      <motion.button
+        className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
+        variants={{
+          initial: {
+            opacity: 0,
+            x: -50,
+          },
+          animate: {
+            opacity: 1,
+            x: 0,
+          },
+          whileScrolled: {
+            opacity: 1,
+            x: 0,
+          },
+        }}
+        initial="initial"
+        animate={["initial", "animate"]}
+        transition={{ duration: 0.5 }}
+        whileScrolled={{ opacity: 1, x: 0 }}
+      >
+        Explore <svg viewBox="0 0 24 24" className="w-4 h-4 ml-2 animate-spin">
+          <path fill="none" stroke="currentColor" stroke-width="2" d="M14.7 12.5L17.5 15.5M15.5 15.5L12.5 18.5M17.5 18.5L14.7 21.5"></path>
+        </svg>
+      </motion.button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@6.4.4/dist/framer-motion.min.js"></script>
+</body>
+</html>
