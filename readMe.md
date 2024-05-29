@@ -1,5 +1,5 @@
-## Tailwinds 
-- Provide a set of classes that usually apply a single style 
+## Tailwind
+- Provide a set of classes, each class usually applies a single style 
 ## Set up tailwind 
 - Install Tailwind CSS using CDN link
 - Install Tailwind CSS using CLI
